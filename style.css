@@ -1,0 +1,56 @@
+:root{
+    --dinosize: 0.4;
+    --santasize: 0.3;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.Move{
+    animation: linear Dino-Santa infinite 5s;
+    position: absolute;
+    display: flex;
+}
+
+.Santa{
+    position: relative;
+    right: 14%;
+    width: calc(934px * var(--santasize));
+    height: calc(641px * var(--santasize));
+    overflow: hidden;
+}
+
+.Dino{
+    position: relative;
+    width: calc(682px * var(--dinosize));
+    height: calc(474px * var(--dinosize));
+    overflow: hidden;
+}
+
+.Dino-Run{
+    animation: dino-run infinite 0.5s steps(10);
+    width: calc(6820px * var(--dinosize));
+    height: calc(474px * var(--dinosize));
+}
+
+.Santa-Run{
+    animation: santa-run infinite 0.5s steps(10);
+    width: calc(9340px * var(--santasize));
+    height: calc(1282px * var(--santasize));
+}
+
+@keyframes santa-run{
+    from{transform: translate3d(0%, 0, 0);}
+    to{transform: translate3d(-100%, 0, 0);}
+}
+
+@keyframes dino-run{
+    from{transform: translate3d(0%, 0, 0);}
+    to{transform: translate3d(-100%, 0, 0);}
+}
+
+@keyframes Dino-Santa{
+    from{left:-28%;}
+    to{left: 100%;}
+}
